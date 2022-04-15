@@ -1,4 +1,4 @@
-require('lsp')
+require('lsp').setup()
 require('mappings')
 require('nvim-cmp-cfg')
 require('rust-tools-cfg')

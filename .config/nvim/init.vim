@@ -3,11 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
+Plug 'mg979/vim-visual-multi'
+Plug 'tpope/vim-surround'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 
-" lsp
+" lsp related
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
@@ -37,22 +39,35 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 
 " others
+Plug 'ap/vim-css-color'
+Plug 'vuciv/vim-bujo'
 call plug#end()
 
 set completeopt=menu,menuone,noselect
 syntax enable
-filetype plugin indent on
+filetype plugin on
+
+nnoremap <A-m> ;
 
 nnoremap ; :
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
+nnoremap <C-s> <cmd>w<CR>
+" nnoremap <C-S> <Plug>BujoAddnormal
+" inoremap <C-S> <Plug>BujoAddinsert
+nmap <C-Q> <Plug>BujoChecknormal
+imap <C-Q> <Plug>BujoCheckinsert
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+imap <C-l> <Del>
+nnoremap <A-q> <cmd>q<CR>
 
 " Expand
-imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+" imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 
 " Expand or jump
-imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+" imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 
 " Jump forward or backward
@@ -62,12 +77,15 @@ imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-T
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
 
-set relativenumber
-set acd
+set number relativenumber
+" set acd " auto change directory
+set cmdheight=1
 set cursorline
 set nohlsearch
 set nowrap
 set signcolumn=yes
+set splitbelow
+set splitright
 
 if has('termguicolors')
   set termguicolors

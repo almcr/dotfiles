@@ -1,0 +1,62 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": " 'JetBrains Mono', 'fira code retina', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.tabSize": 2,
+    "editor.autoClosingDelete": "always",
+    "editor.smoothScrolling": true,
+    "editor.fontSize": 17,
+    "window.menuBarVisibility": "toggle",
+    "terminal.external.linuxExec": "alacritty",
+
+    // Vim keybindings
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-l>"], 
+            "after": ["<Del>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<leader>", "o"],
+          "after": ["o", "<esc>"]
+        },
+        {
+          "before": ["<leader>", "O"],
+          "after": ["O", "<esc>"]
+        },
+        {
+          "before": ["K"],
+          "commands": ["lineBreakInsert"],
+          "silent": true
+        }
+      ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-k>": false
+    },
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.smartcase": true,
+
+
+    // rust-analyzer settings
+    "rust-analyzer.checkOnSave.command": "clippy",
+    // golang settings
+    "go.useLanguageServer": true,
+    "gopls": {
+      "allExperiments": true,
+      "completeUnimported": true,
+      "deepCompletion": true,
+    },
+    "editor.lineNumbers": "relative",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "rust-analyzer.inlayHints.enable": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+}
