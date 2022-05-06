@@ -1,42 +1,74 @@
-set completeopt=menu,menuone,noselect
-syntax enable
-filetype plugin on
+local opts = { noremap=true, silent=true }
+local map = function(mode, from, to) vim.keymap.set(mode, from, to, opts) end
+local map_buf = function(mode, from, to) vim.api.nvim_buf_set_keymap(mode, from, to, opts) end
 
-set number relativenumber
-" set acd " auto change directory
-set cmdheight=1
-set cursorline
-set nohlsearch
-set nowrap
-set signcolumn=yes
-set splitbelow
-set splitright
+-- My Mappings
+map('n', '<A-m>', ';')
+vim.keymap.set('n', ';', ':', {noremap= true})
+map('n', '<leader>o', 'o')
+map('n', '<leader>O', 'O')
+map('n', '<C-s>', '<cmd>w<CR>')
+map('n', '<Leader>s', ':%s/<<C-r><C-w>>')
+map('i', '<C-l>', '<Del>')
+map('n', '<A-q>', '<cmd>q<CR>')
 
-if has('termguicolors')
-  set termguicolors
-endif
 
-" mouse cursor
-set mouse=n
 
-" tab behaviour
-set shiftwidth=2  " operation >> indents 2 columns; << unindents 2 columns
-set tabstop=2     " a hard TAB displays as 2 columns
-set softtabstop=2 " insert/delete 2 spaces when hitting a TAB/BACKSPACE
-set expandtab
+-- Lsp Mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
 
-" gruvbox-material config
-" available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background="medium"
-let g:gruvbox_material_sign_column_background="none"
 
-colorscheme  gruvbox-material
+-- Telescope Mappings
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 
-let g:rust_recommended_style = 0
-highlight! link DiagnosticInfo DiagnosticSignInfo 
-highlight! link DiagnosticError DiagnosticSignError
-highlight! link DiagnosticWarn DiagnosticSignWarn
-highlight! link DiagnosticHint DiagnosticSignHint
-lua require('init')
+
+-- Barbar Mappings
+-- Move to previous/next
+map('n', '<A-,>', ':BufferPrevious<CR>')
+map('n', '<A-.>', ':BufferNext<CR>')
+-- Re-order to previous/next
+map('n', '<A-<>', ':BufferMovePrevious<CR>')
+map('n', '<A->>', ':BufferMoveNext<CR>')
+-- Goto buffer in position...
+map('n', '<A-1>', ':BufferGoto 1<CR>')
+map('n', '<A-2>', ':BufferGoto 2<CR>')
+map('n', '<A-3>', ':BufferGoto 3<CR>')
+map('n', '<A-4>', ':BufferGoto 4<CR>')
+map('n', '<A-5>', ':BufferGoto 5<CR>')
+map('n', '<A-6>', ':BufferGoto 6<CR>')
+map('n', '<A-7>', ':BufferGoto 7<CR>')
+map('n', '<A-8>', ':BufferGoto 8<CR>')
+map('n', '<A-9>', ':BufferGoto 9<CR>')
+map('n', '<A-0>', ':BufferLast<CR>')
+-- Close buffer
+map('n', '<A-c>', ':BufferClose<CR>')
+
+-- Nvim Tree
+map('n', '<C-n>', ':NvimTreeToggle<CR>')
+map('n', '<leader>r', ':NvimTreeRefresh<CR>')
+map('n', '<leader>n', ':NvimTreeFindFile<CR>')
+
+
+
+-- Expand
+-- imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+-- smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+-- 
+-- " Expand or jump
+-- " imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+-- smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+-- 
+-- " Jump forward or backward
+-- imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+-- smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+-- imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+-- smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
 
