@@ -1,3 +1,4 @@
+require('plugins')
 require('lsp').setup()
 require('mappings')
 require('nvim-cmp-cfg')
@@ -7,3 +8,5 @@ require('treesitter-cfg')
 --require('trouble-cfg')
 require('lualine-cfg')
 --require('nvim-lsp-installer-cfg')
+
+require('nvim-tree').setup()
