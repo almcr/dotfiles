@@ -6,6 +6,7 @@ set number relativenumber
 " set acd " auto change directory
 set cmdheight=1
 set cursorline
+set statusline=3
 set nohlsearch
 set nowrap
 set signcolumn=yes

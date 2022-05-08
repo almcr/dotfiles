@@ -10,9 +10,10 @@ return require('packer').startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', use = 'make'}
  
 -- lsp related
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/nvim-cmp'
+  use 'neovim/nvim-lspconfig' -- language server protocol 
+  use 'mfussenegger/nvim-dap' -- debuger adapter protocol
+  use 'hrsh7th/cmp-nvim-lsp'  -- completion engine for lsp
+  use 'hrsh7th/nvim-cmp'      -- completion source for neovim
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
@@ -23,7 +24,7 @@ return require('packer').startup(function(use)
   use 'simrat39/rust-tools.nvim'
   use 'folke/trouble.nvim'
 --   use 'hrsh7th/cmp-nvim-lua'
---   use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/nvim-lsp-installer'
 --   use 'folke/lsp-colors.nvim'
 
 

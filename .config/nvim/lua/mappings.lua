@@ -8,9 +8,10 @@ vim.keymap.set('n', ';', ':', {noremap= true})
 map('n', '<leader>o', 'o')
 map('n', '<leader>O', 'O')
 map('n', '<C-s>', '<cmd>w<CR>')
-map('n', '<Leader>s', ':%s/<<C-r><C-w>>')
+map('n', '<Leader>s', ':%s/<<C-r><C-w>>')       -- replace work under cursor
 map('i', '<C-l>', '<Del>')
 map('n', '<A-q>', '<cmd>q<CR>')
+map('n', '<C-r>', '"hy:%s/<C-r>h//gc<left><left><left>')
 
 
 
@@ -55,7 +56,16 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>')
 map('n', '<leader>r', ':NvimTreeRefresh<CR>')
 map('n', '<leader>n', ':NvimTreeFindFile<CR>')
 
-
+-- Dap 
+map('n', "<F5>", "<Cmd>lua require('dap').continue()<CR>")
+map('n', "<F10>", "<Cmd>lua require('dap').step_over()<CR>")
+map('n', "<F11>", "<Cmd>lua require('dap').step_into()<CR>")
+map('n', "<F12>", "<Cmd>lua require('dap').step_out()<CR>")
+map('n', "<Leader>b", "<Cmd>lua require('dap').toggle_breakpoint()<CR>")
+map('n', "<Leader>B", "<Cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+map('n', "<Leader>lp", "<Cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+map('n', "<Leader>dr", "<Cmd>lua require('dap').repl.open()<CR>")
+map('n', "<Leader>dl", "<Cmd>lua require('dap').run_last()<CR>")
 
 -- Expand
 -- imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'

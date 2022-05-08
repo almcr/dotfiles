@@ -40,7 +40,7 @@ M.setup = function()
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  for _, lsp in pairs({"gopls"}) do
+  for _, lsp in pairs({"gopls", "rust_analyzer"}) do
     require('lspconfig')[lsp].setup {
       on_attach = on_attach_lsp_mappings,
       capabilities = capabilities

@@ -213,10 +213,10 @@ mode "resize" {
 }
 
 # Autostart applications
-exec_always --no-startup-id xwallpaper --daemon --zoom /home/ali/Pictures/Wallpapers/03976_theeleventhhour_2880x1800.jpg
+exec_always --no-startup-id xwallpaper --daemon --zoom /home/ali/Pictures/Wallpapers/aedrian-hhZDn50B17c-unsplash.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 exec_always --no-startup-id numlockx on
-exec --no-startup-id xset r rate 250 35
+exec_always --no-startup-id xset r rate 250 35
 # exec --no-startup-id xautolock -time 5 -locker 'i3lock-fancy -p'
 exec --no-startup-id picom
 
