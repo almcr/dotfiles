@@ -5,15 +5,15 @@ return require('packer').startup(function(use)
   use 'justinmk/vim-sneak'
   -- use 'mg979/vim-visual-multi'
   use 'tpope/vim-surround'
+  use 'tpope/vim-commentary'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', use = 'make'}
- 
+
 -- lsp related
-  use 'neovim/nvim-lspconfig' -- language server protocol 
-  use 'mfussenegger/nvim-dap' -- debuger adapter protocol
-  use 'hrsh7th/cmp-nvim-lsp'  -- completion engine for lsp
-  use 'hrsh7th/nvim-cmp'      -- completion source for neovim
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
@@ -23,9 +23,9 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
   use 'simrat39/rust-tools.nvim'
   use 'folke/trouble.nvim'
---   use 'hrsh7th/cmp-nvim-lua'
   use 'williamboman/nvim-lsp-installer'
---   use 'folke/lsp-colors.nvim'
+  use 'folke/lsp-colors.nvim'
+  use 'RRethy/vim-illuminate'
 
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
   use 'sainnhe/gruvbox-material'
   use 'sainnhe/everforest'
   use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  -- use 'kyazdani42/nvim-tree.lua'
   use 'romgrk/barbar.nvim'
   use 'nvim-lualine/lualine.nvim'
 

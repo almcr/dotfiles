@@ -1,6 +1,10 @@
 local M = {}
 
-local setup_diagnostic_signs = function() 
+-- setup lsp-installer here
+require("nvim-lsp-installer").setup {}
+
+
+local setup_diagnostic_signs = function()
   -- Change LSP diagnostic symbols in the gutter
   local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
   for type, icon in pairs(signs) do
@@ -11,7 +15,7 @@ end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-M.on_attach_lsp_mappings = function(client, bufnr)
+local on_attach_lsp_mappings = function(client, bufnr)
   local opts = { noremap=true, silent=true }
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -31,16 +35,18 @@ M.on_attach_lsp_mappings = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+  require('illuminate').on_attach(client)
 end
 
-M.setup = function() 
+M.setup = function()
   setup_diagnostic_signs()
   -- cmp autocompletion capabilities
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  for _, lsp in pairs({"gopls", "rust_analyzer"}) do
+  for _, lsp in pairs({"gopls", "rust_analyzer", "sumneko_lua"}) do
     require('lspconfig')[lsp].setup {
       on_attach = on_attach_lsp_mappings,
       capabilities = capabilities

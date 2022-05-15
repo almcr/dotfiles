@@ -6,7 +6,6 @@ set number relativenumber
 " set acd " auto change directory
 set cmdheight=1
 set cursorline
-set statusline=3
 set nohlsearch
 set nowrap
 set signcolumn=yes
@@ -31,7 +30,7 @@ set expandtab
 let g:gruvbox_material_background="medium"
 let g:gruvbox_material_sign_column_background="none"
 
-colorscheme  gruvbox-material
+colorscheme  tokyonight
 
 let g:rust_recommended_style = 0
 highlight! link DiagnosticInfo DiagnosticSignInfo 
