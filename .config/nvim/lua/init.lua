@@ -5,7 +5,6 @@ require('mappings')
 require('rust-tools-cfg')
 require('telescope-cfg')
 require('treesitter-cfg')
-require('nvim-tree-cfg')
 require('trouble-cfg')
 require('lualine-cfg')
 

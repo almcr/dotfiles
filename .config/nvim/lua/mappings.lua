@@ -7,11 +7,14 @@ map('n', '<A-m>', ';')
 vim.keymap.set('n', ';', ':', {noremap= true})
 map('n', '<leader>o', 'o')
 map('n', '<leader>O', 'O')
-map('n', '<C-s>', '<cmd>w<CR>')
-map('n', '<Leader>s', ':%s/<<C-r><C-w>>')
+map('n', '<C-s>', '<cmd>w<CR>') -- ctrl-s to write buffer
+map('n', '<Leader>s', ':%s/<<C-r><C-w>>') -- start replace with current word under cursor
 map('i', '<C-l>', '<Del>')
 map('n', '<A-q>', '<cmd>q<CR>')
-
+map('n', '<A-h>', '<C-W><C-H>')
+map('n', '<A-l>', '<C-W><C-L>')
+map('n', '<A-j>', '<C-W><C-J>')
+map('n', '<A-k>', '<C-W><C-K>')
 
 
 -- Lsp Mappings.
