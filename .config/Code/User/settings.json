@@ -1,6 +1,6 @@
 {
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": " 'JetBrains Mono', 'fira code retina', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "  'JetBrains Mono', 'fira code retina', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.cursorSmoothCaretAnimation": true,
   "workbench.list.smoothScrolling": true,
@@ -18,19 +18,24 @@
       "after": [
         "<Del>"
       ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<leader>",
-        "f",
-        "i"
+        "K"
       ],
       "commands": [
-        "editor.action.formatDocument"
-      ],
-      "silent": true
+        "editor.action.showHover"
+      ]
     },
     {
       "before": [
@@ -54,16 +59,35 @@
     },
     {
       "before": [
-        "K"
+        "g",
+        "r"
       ],
       "commands": [
-        "lineBreakInsert"
+        "references-view.findReferences"
       ],
       "silent": true
+    },
+    {
+      "before": [
+        "<space>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<C-b>"
+      ],
+      "commands": [
+        "workbench.files.action.showActiveFileInExplorer"
+      ]
     }
   ],
   "vim.handleKeys": {
-    "<C-a>": false,
+    "<C-a>": true,
     "<C-f>": false,
     "<C-k>": false
   },
@@ -74,17 +98,71 @@
   "rust-analyzer.checkOnSave.command": "clippy",
   // golang settings
   "go.useLanguageServer": true,
+  "go.inlayHints.assignVariableTypes": true,
   "gopls": {
     "allExperiments": true,
     "completeUnimported": true,
     "deepCompletion": true,
   },
-  "editor.lineNumbers": "relative",
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Gruvbox Material Dark",
-  "rust-analyzer.inlayHints.enable": true,
   "extensions.ignoreRecommendations": true,
   "editor.minimap.enabled": false,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "gruvboxMaterial.colorfulSyntax": true,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.fontSize": 16,
+  "remote.SSH.connectTimeout": 30,
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night Storm]": {
+      "textMateRules": [
+        // {
+        //   "scope": "string.quoted.raw.go",
+        //   "settings": {
+        //     "foreground": "#FF0000"
+        //   }
+        // }
+      ]
+    }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[Tokyo Night Storm]": {
+      "enabled": true,
+      "rules": {
+        "type": "#0db9d7",
+        "parameter": "#f18701",
+        "method": "#73daca",
+        "variable.definition": "#73daca",
+        "namespace": "#89ddff",
+      },
+    },
+    "[Gruvbox Material Dark]": {
+      "enabled": true,
+      "rules": {
+        "namespace": "#89B482",
+        "variable": "#D4BE98",
+        "variable.definition": "#7daea3",
+      },
+    },
+  },
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "redhat.telemetry.enabled": false,
+  "editor.wordWrap": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlayHints.enabled": false,
+  "github.copilot.advanced": {
+  },
+  "vim.smartRelativeLine": true,
+  "editor.lineNumbers": "relative",
+  "window.zoomLevel": 0.7
+  // "editor.tokenColorCustomizations": {
+  //   "types": "#2ac3de",
+  // },
 }

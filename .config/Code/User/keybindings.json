@@ -15,5 +15,51 @@
   {
     "key": "ctrl+shift+t",
     "command": "-workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "alt+.",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "alt+,",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+e ctrl+t",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusNextPart"
+  },
+  {
+    "key": "f6",
+    "command": "-workbench.action.focusNextPart"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusPreviousPart"
+  },
+  {
+    "key": "shift+f6",
+    "command": "-workbench.action.focusPreviousPart"
+  },
+  {
+    "key": "f6",
+    "command": "editor.debug.action.runToCursor"
   }
 ]
