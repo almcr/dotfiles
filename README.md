@@ -2,6 +2,7 @@
 My dotfiles configs
 
 ### My Workspace dependencies
+- `OMZ` https://ohmyz.sh/#install
 - `starship prompt` https://starship.rs/guide/#%F0%9F%9A%80-installation
 - `zsh-autosuggestion` https://github.com/zsh-users/zsh-autosuggestions 
 - `zsh-syntax highlight` https://github.com/zsh-users/zsh-syntax-highlighting.git
