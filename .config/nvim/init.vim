@@ -25,6 +25,9 @@ set tabstop=2     " a hard TAB displays as 2 columns
 set softtabstop=2 " insert/delete 2 spaces when hitting a TAB/BACKSPACE
 set expandtab
 
+" imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+" let g:copilot_no_tab_map = v:true
+
 " gruvbox-material config
 " available values: 'hard', 'medium'(default), 'soft'
 let g:gruvbox_material_background="medium"

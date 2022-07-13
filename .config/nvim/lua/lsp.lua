@@ -40,13 +40,13 @@ local on_attach_lsp_mappings = function(client, bufnr)
 end
 
 M.setup = function()
-  -- setup_diagnostic_signs()
+  setup_diagnostic_signs()
   -- cmp autocompletion capabilities
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  for _, lsp in pairs({ "gopls", "rust_analyzer", "sumneko_lua" }) do
+  for _, lsp in pairs({ "gopls", "rust_analyzer", "sumneko_lua", "bashls" }) do
     require('lspconfig')[lsp].setup {
       on_attach = on_attach_lsp_mappings,
       capabilities = capabilities

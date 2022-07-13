@@ -8,4 +8,9 @@ require('treesitter-cfg')
 require('trouble-cfg')
 require('lualine-cfg')
 
--- require('nvim-tree').setup()
+require('nvim-tree').setup()
+
+
+require('nvim-autopairs').setup{
+  map_cr = true
+}
