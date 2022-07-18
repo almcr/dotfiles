@@ -3,7 +3,7 @@ My dotfiles configs
 
 ### My Workspace dependencies
 - `Alacritty` 
-- `Nerd fonts` [JetbrainsMono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+- `Nerd fonts` [JetbrainsMono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) or [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf)
 - `OMZ` https://ohmyz.sh/#install
 - `starship prompt` https://starship.rs/guide/#%F0%9F%9A%80-installation
 - `zsh-autosuggestion` https://github.com/zsh-users/zsh-autosuggestions 
