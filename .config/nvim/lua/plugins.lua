@@ -1,16 +1,19 @@
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'-- Packer can manage itself
-  use {'junegunn/fzf', dir = '~/.fzf', use = './install --all' }
+  use 'wbthomason/packer.nvim' -- Packer can manage itself
+
+  use { 'junegunn/fzf', dir = '~/.fzf', use = './install --all' }
   use 'easymotion/vim-easymotion'
   use 'justinmk/vim-sneak'
-  -- use 'mg979/vim-visual-multi'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
-  use {'nvim-telescope/telescope-fzf-native.nvim', use = 'make'}
+  use { 'nvim-telescope/telescope-fzf-native.nvim', use = 'make' }
+  use 'tpope/vim-fugitive' -- vim with git integration
+  use 'github/copilot.vim' -- vim copilot
+  use 'folke/todo-comments.nvim'
 
--- lsp related
+  -- lsp related
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
@@ -25,35 +28,24 @@ return require('packer').startup(function(use)
   use 'folke/trouble.nvim'
   use 'williamboman/nvim-lsp-installer'
   use 'RRethy/vim-illuminate'
+  use 'simrat39/symbols-outline.nvim'
+  use 'SmiteshP/nvim-navic'
+  use 'folke/lsp-colors.nvim'
 
 
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'nvim-treesitter/playground'
 
--- themes
-  use 'altercation/vim-colors-solarized'
-  use {'folke/tokyonight.nvim', branch = 'main'}
-  use 'rakr/vim-one'
+  -- themes
+  use { 'folke/tokyonight.nvim', branch = 'main' }
   use 'sainnhe/gruvbox-material'
   use 'sainnhe/everforest'
   use 'kyazdani42/nvim-web-devicons'
-  -- use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-tree.lua'
   use 'romgrk/barbar.nvim'
   use 'nvim-lualine/lualine.nvim'
 
--- others
-  use 'ap/vim-css-color'
-
-  use {
-  'chipsenkbeil/distant.nvim',
-  config = function()
-    require('distant').setup {
-      -- Applies Chip's personal settings to every machine you connect to
-      --
-      -- 1. Ensures that distant servers terminate with no connections
-      -- 2. Provides navigation bindings for remote directories
-      -- 3. Provides keybinding to jump into a remote file's parent directory
-      ['*'] = require('distant.settings').chip_default()
-    }
-  end
-}
+  -- others
+  use 'windwp/nvim-autopairs'
+  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
 end)

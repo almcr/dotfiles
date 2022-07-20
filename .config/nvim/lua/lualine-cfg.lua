@@ -8,7 +8,7 @@ require('lualine').setup{
     lualine_a = {
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
-    lualine_b = { 'filename', 'branch' },
+    lualine_b = { 'branch' },
     lualine_c = { 'fileformat' },
     lualine_x = {},
     lualine_y = { 'filetype', 'progress' },
@@ -27,6 +27,7 @@ require('lualine').setup{
   tabline = {},
   extensions = {},
 }
+
 -- require('lualine').setup{
 --   options = {
 --     theme = 'auto'

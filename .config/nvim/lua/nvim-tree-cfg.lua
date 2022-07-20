@@ -9,7 +9,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
-  update_cwd = false,
+  update_cwd = true,
   view = {
     width = 30,
     height = 30,
@@ -82,7 +82,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
       restrict_above_cwd = false,
     },
     open_file = {
-      quit_on_open = true,
+      quit_on_open = false,
       resize_window = true,
       window_picker = {
         enable = true,
