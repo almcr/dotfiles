@@ -10,6 +10,7 @@ local options = {
     mapleader = " ", -- sets vim.g.mapleader
     tokyonight_style = "night",
     catppuccin_flavour = "mocha",
+    rust_recommended_style = 0,
   },
 }
 

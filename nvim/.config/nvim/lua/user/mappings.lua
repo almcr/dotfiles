@@ -35,6 +35,6 @@ return {
     -- ["<esc>"] = false,
   },
   v = {
-    ["//"] = { 'y:%s/\\V<c-r>"//g<left><left>', desc = "start replace for a visual selection" },
+    ["//"] = { 'y:%s/\\V<c-r>"//g<left><left>', desc = "start replace of the visual selection" },
   },
 }

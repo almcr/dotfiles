@@ -32,6 +32,11 @@ return {
       "mfussenegger/nvim-dap",
     },
 
+    {
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    },
+
     -- We also support a key value style plugin definition similar to NvChad:
     -- ["ray-x/lsp_signature.nvim"] = {
     --   event = "BufRead",

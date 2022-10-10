@@ -26,6 +26,7 @@ local config = {
 
   -- Set colorscheme to use
   colorscheme = "catppuccin",
+  -- colorscheme = "tokyonight",
 
   -- Override highlight groups in any theme
   highlights = {
