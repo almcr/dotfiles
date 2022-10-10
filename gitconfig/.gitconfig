@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	name = almcr
+	email = alm.dev2@gmail.com
+  
+[push]
+	default = current
