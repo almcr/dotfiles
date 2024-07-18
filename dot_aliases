@@ -25,5 +25,6 @@ alias pbp="pbpaste"
 alias ctx="kubectl config current-context"
 alias tmuxa="tmux a -t"
 alias py="python"
-alias ipy=ipython
+alias ipy="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias notify='terminal-notifier -title "Terminal" -message "Done! Exit status: $?"' -activate com.apple.Terminal
+alias cm=chezmoi
