@@ -28,3 +28,4 @@ alias py="python"
 alias ipy="ipython --TerminalInteractiveShell.editing_mode=vi"
 alias notify='terminal-notifier -title "Terminal" -message "Done! Exit status: $?"' -activate com.apple.Terminal
 alias cm=chezmoi
+alias k=kubectl
