@@ -1,0 +1,29 @@
+alias zshconfig="$EDITOR ~/.zshrc"
+alias nvconfig="$EDITOR ~/.config/nvim/init.vim"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias python="python3"
+alias clip="xclip -sel c"
+alias tou="touch"
+alias vi="$EDITOR"
+alias j="jump"
+alias l="exa"
+alias ll="exa -lh"
+alias i3config="$EDITOR ~/.config/i3/config"
+alias alaconfig="$EDITOR ~/.config/alacritty/alacritty.yml"
+alias leftconfig="$EDITOR ~/.config/leftwm/config.toml"
+alias lefthemeconfig="$EDITOR ~/.config/leftwm/theme/theme.toml"
+alias nvplug="$EDITOR /home/ali/.config/nvim/lua/plugins.lua"
+alias clipssh="clip < ~/.ssh/id_ecdsa.pub"
+alias sshdev="ssh -t dataimpact@163.172.109.121"
+alias lg=lazygit
+alias nvmap='nvim ~/.config/nvim/lua/mappings.lua'
+alias gla="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias cb=$'git branch --show-current'  
+alias ct=$'git describe --abbrev=0 --tags'  
+alias gpc='git push origin $(cb) $(ct)'
+alias pbp="pbpaste"
+alias ctx="kubectl config current-context"
+alias tmuxa="tmux a -t"
+alias py="python"
+alias ipy=ipython
+alias notify='terminal-notifier -title "Terminal" -message "Done! Exit status: $?"' -activate com.apple.Terminal
